@@ -14,7 +14,7 @@
   "build-depends": [],
   "test-depends": [
     "Test",
-    "Test::Meta"
+    "Test::META"
   ],
   "provides": {
     "PodExtraction": "lib/PodExtraction.pm6",
