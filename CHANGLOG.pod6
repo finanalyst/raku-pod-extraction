@@ -1,0 +1,10 @@
+=begin pod
+=TITLE Raku Pod Extraction
+=SUBTITLE Change log
+
+=head1 2021-01-18 Transfer from Raku::Pod::Render
+
+=item create module, rewrite Extractor.raku utility into module and Entrypoint
+=item no other changes
+
+=end pod
