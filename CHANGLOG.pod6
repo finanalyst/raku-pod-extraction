@@ -7,4 +7,7 @@
 =item create module, rewrite Extractor.raku utility into module and Entrypoint
 =item no other changes
 
+=head1 2021-02-03
+=item fixup for change in Raku::Pod::Render
+
 =end pod

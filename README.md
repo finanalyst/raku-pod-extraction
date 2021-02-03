@@ -1,7 +1,6 @@
 # Extractor GUI
->Mainly used to generate a README.md from <Modulename>.pm6, which contain POD6
 
-
+----
 ----
 ## Table of Contents
 
@@ -26,6 +25,5 @@ head1 Dependencies
 
 
 
-
 ----
-Rendered from README at 2021-01-18T15:00:43Z
+Rendered from README at 2021-02-03T00:00:24Z

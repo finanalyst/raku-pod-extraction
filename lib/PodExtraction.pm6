@@ -16,6 +16,7 @@ use GTK::Simple::TextView;
 use GTK::Simple::Grid;
 
 unit module PodExtraction;
+no precompilation;
 
 sub Extractor is export {
     my @files;
@@ -137,7 +138,7 @@ sub MarkDown(@fn, $report) {
 
 sub process(@fn, $report, $pr, $ext) {
     for @fn -> $fn {
-        $pr.path = $pr.name = $pr.title = $fn<oname>;
+        $pr.pod-file.path = $pr.pod-file.name = $pr.pod-file.title = $fn<oname>;
         my $pod = load($fn<path> ~ '/' ~ $fn<name>);
         $pr.render-tree($pod);
         $pr.file-wrap;
