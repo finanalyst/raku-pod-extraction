@@ -16,7 +16,6 @@ use GTK::Simple::TextView;
 use GTK::Simple::Grid;
 
 unit module PodExtraction;
-no precompilation;
 
 sub Extractor is export {
     my @files;

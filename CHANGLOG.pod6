@@ -10,4 +10,7 @@
 =head1 2021-02-03
 =item fixup for change in Raku::Pod::Render
 
+=head1 2022-01-01
+=item remove no precompilation
+
 =end pod
