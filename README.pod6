@@ -23,7 +23,7 @@ When the list is complete, click on B<Convert>. The converted files will be show
 This tool is fairly primitive and it may not handle all error conditions. The tool is intended for generating
 md and html files in an adhoc manner.
 
-head1 Dependencies
+=head1 Dependencies
 
 C<Extractor> requires GTK::Simple. It is known that this is difficult to install on Windows. However, if
 the GTK library has already been installed on Windows, then GTK::Simple will load with no problem. Look at the GTK website

@@ -1,10 +1,10 @@
-![github-tests-passing-badge](https://github/actions/workflows/test.yaml/badge.svg)
-
+![github-tests-passing-badge](https://github.com/finanalyst/raku-pod-extraction/actions/workflows/test.yaml/badge.svg)
 # Extractor GUI
+>Mainly used to generate a README.md from <Modulename>.pm6, which contain POD6
 
-----
-----
+
 ## Table of Contents
+[Dependencies](#dependencies)  
 
 ----
 Run `Extractor` in the directory where the transformed files are needed. Select POD6 files (`.pod6`, `.pm6`, `.rakudoc`) by clicking on the FileChooser button at the top of the panel. The Output file name by default is the same as the basename of the input file, but can be changed. Select the output formats.
@@ -19,8 +19,7 @@ When the list is complete, click on **Convert**. The converted files will be sho
 
 This tool is fairly primitive and it may not handle all error conditions. The tool is intended for generating md and html files in an adhoc manner.
 
-head1 Dependencies
-
+# Dependencies
 `Extractor` requires GTK::Simple. It is known that this is difficult to install on Windows. However, if the GTK library has already been installed on Windows, then GTK::Simple will load with no problem. Look at the GTK website for information about Windows installations of GTK.
 
 
@@ -30,4 +29,4 @@ head1 Dependencies
 
 
 ----
-Rendered from README at 2022-02-19T10:35:27Z
+Rendered from README at 2022-02-20T20:42:56Z

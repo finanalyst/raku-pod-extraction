@@ -21,7 +21,7 @@ sub Extractor is export {
     my @files;
     my $cancel;
     my $action;
-    my $badge-path = '/actions/workflows/test.yaml/badge.svg';
+    my Str $badge-path;
 
     my $app = GTK::Simple::App.new(:title("Pod Extractor Utility"));
     $app.border-width = 5;
@@ -43,7 +43,7 @@ sub Extractor is export {
             [0, 5, 1, 1] => GTK::Simple::MarkUpLabel.new(
                     text => 'Github badge path <span foreground="blue">[module name]</span>'),
             [1, 6, 1, 1] => my $b-path-entry = GTK::Simple::Entry.new(
-                    text => $badge-path ),
+                    placeholder-text => 'Using default calculated path' ),
             );
     my Bool $highlight-code = $hilite.status = False;
     my Bool $min-top = $no-css.status = False;
