@@ -1,3 +1,5 @@
+![github-tests-passing-badge](https://github/actions/workflows/test.yaml/badge.svg)
+
 # Extractor GUI
 
 ----
@@ -5,7 +7,9 @@
 ## Table of Contents
 
 ----
-Run `Extractor` in the directory where the transformed files are needed. Select POD6 files by clicking on the FileChooser button at the top of the panel. The Output file name by default is the same as the basename of the input file, but can be changed. Select the output formats.
+Run `Extractor` in the directory where the transformed files are needed. Select POD6 files (`.pod6`, `.pm6`, `.rakudoc`) by clicking on the FileChooser button at the top of the panel. The Output file name by default is the same as the basename of the input file, but can be changed. Select the output formats.
+
+Select `add github badge` to add a github badge at the beginning of the md file (typically README.md). The name of the module and the source url is taken from the META6.json file. An exception is generated if there is no META6.json file.
 
 Will also generate HTML files from POD6 with css to be used as a static file. For HTML generation, the CSS and Images/favicons can be replaced with non-functional divs.
 
@@ -26,4 +30,4 @@ head1 Dependencies
 
 
 ----
-Rendered from README at 2021-02-03T00:00:24Z
+Rendered from README at 2022-02-19T10:35:27Z

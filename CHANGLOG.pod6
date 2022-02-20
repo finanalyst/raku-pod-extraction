@@ -13,4 +13,8 @@
 =head1 2022-01-01
 =item remove no precompilation
 
+=head1 2022-02-18 v0.2.0
+=item add github badge functionality
+=item do not call HTML or MD methods on empty arrays
+
 =end pod

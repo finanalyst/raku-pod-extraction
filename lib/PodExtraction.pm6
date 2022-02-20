@@ -21,22 +21,37 @@ sub Extractor is export {
     my @files;
     my $cancel;
     my $action;
-    my $more;
+    my $badge-path = '/actions/workflows/test.yaml/badge.svg';
 
     my $app = GTK::Simple::App.new(:title("Pod Extractor Utility"));
     $app.border-width = 5;
     my $file-chooser-button = GTK::Simple::FileChooserButton.new;
     # =HTML Processing ==================================================
     my $html-options = GTK::Simple::Grid.new(
-            [0, 0, 1, 1] => GTK::Simple::MarkUpLabel.new(text => 'html-highlight'),
-            [1, 0, 1, 1] => GTK::Simple::MarkUpLabel.new(:text('no css, no camelia image, no favicon')),
-            [0, 1 , 1, 1] => my $hilite = GTK::Simple::CheckButton.new(:label('')),
-            [1, 1, 1, 1] => my $no-css = GTK::Simple::CheckButton.new(:label(''))
+            [0, 0, 1, 1] => GTK::Simple::MarkUpLabel.new(
+                    text => '<span foreground="green">HTML options</span>'
+                    ),
+            [0, 1, 1, 1] => my $hilite = GTK::Simple::CheckButton.new(:label('')),
+            [1, 1, 1, 1] => GTK::Simple::MarkUpLabel.new(text => 'highlight'),
+            [0, 2, 1, 1] => my $no-css = GTK::Simple::CheckButton.new(:label('')),
+            [1, 2, 1, 1] => GTK::Simple::MarkUpLabel.new(text => 'minimise css, camelia image, and favicon'),
+            [0, 3, 1, 1] => GTK::Simple::MarkUpLabel.new(
+                    text => '<span foreground="green">Markdown options</span>'
+                    ),
+            [0, 4 , 1, 1] => my $badge = GTK::Simple::CheckButton.new(:label('')),
+            [1, 4, 1, 1] => GTK::Simple::MarkUpLabel.new(text => 'Add github badge'),
+            [0, 5, 1, 1] => GTK::Simple::MarkUpLabel.new(
+                    text => 'Github badge path <span foreground="blue">[module name]</span>'),
+            [1, 6, 1, 1] => my $b-path-entry = GTK::Simple::Entry.new(
+                    text => $badge-path ),
             );
     my Bool $highlight-code = $hilite.status = False;
     my Bool $min-top = $no-css.status = False;
+    my Bool $md-badge = $badge.status = False;
     $hilite.toggled.tap: -> $b { $highlight-code = !$highlight-code }
     $no-css.toggled.tap: -> $b { $min-top = !$min-top }
+    $badge.toggled.tap: -> $b { $md-badge = !$md-badge }
+    $b-path-entry.changed.tap: -> $b { $badge-path = $b-path-entry.text }
     $html-options.column-spacing = 10;
     # ====================================================================
     # =FILE BOX ==========================================================
@@ -114,8 +129,8 @@ sub Extractor is export {
         $cancel.label = 'Finish';
         my @md = @files.grep({ .<md> and .<convert> });
         my @html = @files.grep({ .<html> and .<convert> });
-        HTML(@html, $report, $highlight-code, $min-top);
-        MarkDown(@md, $report);
+        HTML(@html, $report, $highlight-code, $min-top) if ?@html;
+        MarkDown(@md, $report, $md-badge, $badge-path) if ?@md;
     };
 
     $app.set-content($convert);
@@ -130,8 +145,8 @@ sub HTML(@fn, $report, $highlight-code, $min-top) {
     process(@fn, $report, $pr, 'html')
 }
 
-sub MarkDown(@fn, $report) {
-    my Pod::To::MarkDown $pr .= new;
+sub MarkDown(@fn, $report, $github-badge, $badge-path) {
+    my Pod::To::MarkDown $pr .= new(:$github-badge,:$badge-path);
     process(@fn, $report, $pr, 'md')
 }
 
