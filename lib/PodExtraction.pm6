@@ -1,5 +1,4 @@
 use v6.*;
-use ProcessedPod;
 use ExtractPod;
 use Pod::To::HTML2:auth<github:finanalyst>;
 use Pod::To::MarkDown:auth<github:finanalyst>;
