@@ -1,7 +1,7 @@
 {
   "name": "raku-pod-extraction",
   "description": "GUI to generate md and html from POD6 in a pm6 file",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "perl": "6.d",
   "authors": [
     "Richard Hainsworth, aka finanalyst"
@@ -9,19 +9,23 @@
   "auth": "zef:finanalyst",
   "depends": [
     "GTK::Simple",
-    "Raku::Pod::Render:ver<3.7.6+>"
+    "Raku::Pod::Render:ver<4.0.0+>",
+    "Pod::Load"
   ],
   "build-depends": [],
   "test-depends": [
-    "Test",
-    "Test::META"
+    "Test"
   ],
   "provides": {
-    "Extractor": "bin/Extractor",
-    "PodExtraction": "lib/PodExtraction.rakumod"
+    "PodExtraction": "lib/PodExtraction.rakumod",
+    "RakuDocRender": "lib/RakuDocRender.rakumod"
   },
   "resources": [],
   "license": "Artistic-2.0",
   "source-url": "git://github.com/finanalyst/raku-pod-extraction.git",
+  "bin": [
+    "bin/Extractor",
+    "bin/RakuRender"
+  ],
   "source-type": "git"
 }

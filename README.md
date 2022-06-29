@@ -11,7 +11,7 @@ Run `Extractor` in the directory where the transformed files are needed. Select 
 
 Select `add github badge` to add a github badge at the beginning of the md file (typically README.md). The name of the module and the source url is taken from the META6.json file. An exception is generated if there is no META6.json file.
 
-Will also generate HTML files from POD6 with css to be used as a static file. For HTML generation, the CSS and Images/favicons can be replaced with non-functional divs.
+Will also generate HTML files from POD6 using HTML2 (see ProcessPod documentation for information). HTML2 leaves css and favicon files in the directory with the html file.
 
 If a file was selected by mistake, uncheck the 'convert' box on the far left and it will not be processed.
 
@@ -29,4 +29,4 @@ This tool is fairly primitive and it may not handle all error conditions. The to
 
 
 ----
-Rendered from README at 2022-06-13T18:12:35Z
+Rendered from README at 2022-10-30T09:24:27Z

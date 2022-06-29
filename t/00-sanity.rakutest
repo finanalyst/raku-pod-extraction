@@ -4,6 +4,7 @@ require Test::META <&meta-ok>;
 
 meta-ok(:relaxed-name);
 use-ok 'PodExtraction';
+use-ok 'RakuDocRender';
 
 
 done-testing;

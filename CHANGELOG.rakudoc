@@ -21,4 +21,7 @@
 =item change CI setup to minimise actions
 =item add placeholder to GTK
 
+=head1 2022-10-30 v0.2.5
+=item make consistent with new Render::Pod
+
 =end pod
