@@ -1,8 +1,8 @@
 {
   "name": "raku-pod-extraction",
   "description": "GUI to generate md and html from POD6 in a pm6 file",
-  "version": "0.2.2",
-  "perl": "6.*",
+  "version": "0.2.3",
+  "perl": "6.d",
   "authors": [
     "Richard Hainsworth, aka finanalyst"
   ],
@@ -17,8 +17,8 @@
     "Test::META"
   ],
   "provides": {
-    "PodExtraction": "lib/PodExtraction.pm6",
-    "Extractor": "bin/Extractor"
+    "Extractor": "bin/Extractor",
+    "PodExtraction": "lib/PodExtraction.rakumod"
   },
   "resources": [],
   "license": "Artistic-2.0",
