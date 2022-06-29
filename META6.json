@@ -9,7 +9,7 @@
   "auth": "zef:finanalyst",
   "depends": [
     "GTK::Simple",
-    "Raku::Pod::Render:ver<3.7.5+>"
+    "Raku::Pod::Render:ver<3.7.6+>"
   ],
   "build-depends": [],
   "test-depends": [
