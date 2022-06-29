@@ -1,12 +1,12 @@
 {
   "name": "raku-pod-extraction",
   "description": "GUI to generate md and html from POD6 in a pm6 file",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "perl": "6.d",
   "authors": [
     "Richard Hainsworth, aka finanalyst"
   ],
-  "auth": "github:finanalyst",
+  "auth": "zef:finanalyst",
   "depends": [
     "GTK::Simple",
     "Raku::Pod::Render:ver<3.7.5+>"
