@@ -51,7 +51,7 @@ sub Extractor is export {
     $no-css.toggled.tap: -> $b { $min-top = !$min-top }
     $badge.toggled.tap: -> $b { $md-badge = !$md-badge }
     $b-path-entry.changed.tap: -> $b { $badge-path = $b-path-entry.text }
-    $html-options.column-spacing(10);
+    $html-options.column-spacing = 10;
     # ====================================================================
     # =FILE BOX ==========================================================
     my $files-box = GTK::Simple::Grid.new(
@@ -61,7 +61,7 @@ sub Extractor is export {
             [3, 0, 1, 1] => GTK::Simple::MarkUpLabel.new(text => '.md'),
             [4, 0, 1, 1] => GTK::Simple::MarkUpLabel.new(text => '.html'),
             );
-    $files-box.column-spacing(10);
+    $files-box.column-spacing = 10;
     # ===========================================================
     # =Bottom buttons ============================================
     my $buttons = GTK::Simple::HBox.new([
