@@ -8,7 +8,7 @@
 [2022-01-01](#2022-01-01)  
 [2022-02-18 v0.2.0](#2022-02-18-v020)  
 [2022-02-20 v0.2.1](#2022-02-20-v021)  
-[2022-10-30 v0.2.5](#2022-10-30-v025)  
+[2022-10-30 v0.3.0](#2022-10-30-v030)  
 
 ----
 # 2021-01-18 Transfer from Raku::Pod::Render
@@ -32,7 +32,7 @@
 
 *  add placeholder to GTK
 
-# 2022-10-30 v0.2.5
+# 2022-10-30 v0.3.0
 
 
 *  make consistent with new Render::Pod
@@ -42,4 +42,4 @@
 
 
 ----
-Rendered from CHANGELOG at 2022-10-30T09:24:16Z
+Rendered from CHANGELOG at 2022-10-30T09:37:26Z
